@@ -8,16 +8,16 @@ from django.urls import reverse #Used to generate URLs by reversing the URL patt
 import uuid
 # Create your models here.
 class Genre(models.Model):
-    
-   # "modelo que representa un genero literario(p ej.ciencia ficcion poesia etc
-    
-    name=models.CharField(max_length=200,help="Ingrese el nombre del genero p eje ciencia ficcion romanticismo")
+    """
+    Modelo que representa un género literario (p. ej. ciencia ficción, poesía, etc.).
+    """
+    name = models.CharField(max_length=200, help_text="Ingrese el nombre del género (p. ej. Ciencia Ficción, Poesía Francesa etc.)")
     
     def __str__(self):
-     #   cadena que representa a la instancia en particular  de lmodelo(p ej en el sitio de afdministradores)
-        
+        """
+        Cadena que representa a la instancia particular del modelo (p. ej. en el sitio de Administración)
+        """
         return self.name
-    
 class Book(models.Model):
     """
     Modelo que representa un libro (pero no un Ejemplar específico).
