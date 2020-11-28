@@ -6,7 +6,9 @@ from .models import Book, Author, BookInstance, Genre
 def index(request):
     """
     Función vista para la página inicio del sitio.
+    
     """
+    #extrae contadores de registros usando el atributo objects.all() en las clases del modelo
     # Genera contadores de algunos de los objetos principales
     num_books=Book.objects.all().count()
     num_instances=BookInstance.objects.all().count()
