@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Author,Book,Genre,BookInstance
+from .models import provedor,pedido,producto,cliente
 #La aplicación de administración de Django puede usar tus modelos para construir automáticamente un área dentro del sitio que 
 #puedes usar para crear, consultar, actualizar y borrar registros. 
 
@@ -10,9 +10,9 @@ from .models import Author,Book,Genre,BookInstance
 
 #Como resultado, todo lo que  debes 
 #hacer para agregar tus modelos a la aplicación admin  es  registrarlos
-admin.site.register(Book)
-admin.site.register(Author)
-admin.site.register(Genre)
-admin.site.register(BookInstance)
+admin.site.register(provedor)
+admin.site.register(pedido)
+admin.site.register(producto)
+admin.site.register(cliente)
 
 #crear super usuario reinicir servidor
